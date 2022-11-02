@@ -1,0 +1,15 @@
+.commonBtn {
+  background-color: #fff;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+#openModalBtn {
+  margin-bottom: 10px;
+}
+
+#mainPageModal {
+  display: none;
+}
