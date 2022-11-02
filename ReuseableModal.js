@@ -16,12 +16,12 @@ class ReuseableModal extends HTMLElement {
         this.setAttribute("message", val);
     }
 
-    get id() {
+    get childrenId() {
         return this.getAttribute("id");
     }
 
-    set id(val) {
-        this.setAttribute("id", val);
+    set childrenId(val) {
+        this.setAttribute("childrenId", val);
     }
 
     get btnOne() {
@@ -60,7 +60,7 @@ class ReuseableModal extends HTMLElement {
     }
 
     closeModal() {
-        this.shadow.querySelector(`#${this.id}`).style.display = "none";
+        this.shadow.querySelector(`#${this.childrenId}`).style.display = "none";
     }
 
     connectedCallback() {
@@ -115,7 +115,7 @@ class ReuseableModal extends HTMLElement {
         }
       </style>
 
-      <div id="${this.id}" class="modal">
+      <div id="${this.childrenId}" class="modal">
         <div class="modal-content">
           <p>${this.message}</p>
           <div class="modalActionBtn">
